@@ -339,7 +339,6 @@ class ClassificationTab(QWidget):
             header.setSectionResizeMode(i, QHeaderView.ResizeMode.Stretch)
         
         # Mostrar headers
-        print(self.results_table.horizontalHeader().isEnabled())
         #self.results_table.verticalHeader().setVisible(True)"""
     
     def export_results(self):

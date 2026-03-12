@@ -49,14 +49,16 @@ class ClassificationService:
         # Configurar validación cruzada estratificada
         cv = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=42)
         
+        
         for algorithm_name in selected_algorithms:
             if algorithm_name not in self.algorithms:
                 continue
                 
-            algorithm_results = {}
+            
             classifier = self.algorithms[algorithm_name]
             
             try:
+                algorithm_results = {}
                 for metric_name in selected_metrics:
                     if metric_name not in self.metrics:
                         continue
